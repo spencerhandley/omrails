@@ -29,3 +29,7 @@ Served asset /rails.png - 304 Not Modified (0ms)
 
 Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-05 22:11:26 -0700
 Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-06 14:08:27 -0700
+Served asset /rails.png - 304 Not Modified (5ms)
