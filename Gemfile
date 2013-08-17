@@ -8,6 +8,7 @@ gem "activemodel", "~> 4.0.0"
 gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
 gem "aws-sdk"
+gem "faker"
 
 group :production do 
 	gem 'pg'
