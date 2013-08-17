@@ -3,8 +3,8 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   # GET /pins
-  def index
-    @pins = Pin.all
+ def index
+    @pins = Pin.order("created_at desc")
   end
 
   # GET /pins/1
