@@ -7,6 +7,7 @@ gem 'simple_form'
 gem "activemodel", "~> 4.0.0"
 gem 'protected_attributes'
 gem "paperclip", "~> 3.0"
+gem "aws-sdk"
 
 group :production do 
 	gem 'pg'
