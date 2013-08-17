@@ -13,4 +13,3 @@ jQuery ->
                 $('.pagination').text("Fetching more pins...")
                 $.getScript(url)
             $(window).scroll()
-		
