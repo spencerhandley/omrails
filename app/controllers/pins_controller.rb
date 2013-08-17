@@ -1,4 +1,5 @@
 class PinsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   # GET /pins
@@ -12,16 +13,17 @@ class PinsController < ApplicationController
 
   # GET /pins/new
   def new
-    @pin = Pin.new
+    @pin = current_user.pins.new 
   end
 
   # GET /pins/1/edit
   def edit
+    @pin = current_user.pins.find(params[:id])
   end
 
   # POST /pins
   def create
-    @pin = Pin.new(pin_params)
+    @pin = current_user.pins.new (params[:pin])
 
     if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
@@ -32,6 +34,7 @@ class PinsController < ApplicationController
 
   # PATCH/PUT /pins/1
   def update
+    @pin = current_user.pins.find(params[:id])
     if @pin.update(pin_params)
       redirect_to @pin, notice: 'Pin was successfully updated.'
     else
@@ -41,6 +44,7 @@ class PinsController < ApplicationController
 
   # DELETE /pins/1
   def destroy
+    @pin = current_user.pins.find(params[:id])
     @pin.destroy
     redirect_to pins_url, notice: 'Pin was successfully destroyed.'
   end
