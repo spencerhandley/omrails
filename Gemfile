@@ -6,6 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem "activemodel", "~> 4.0.0"
 gem 'protected_attributes'
+gem "paperclip", "~> 3.0"
 
 group :production do 
 	gem 'pg'
